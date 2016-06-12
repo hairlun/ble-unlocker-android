@@ -46,6 +46,7 @@ import android.graphics.Bitmap;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.Environment;
+import android.telephony.TelephonyManager;
 import android.view.View;
 import android.widget.Toast;
 
@@ -619,6 +620,21 @@ public class Utils {
 
     public static int dpToPx(int dp){
         return  (int)(dp* Resources.getSystem().getDisplayMetrics().density);
+    }
+    
+    public static String getImsi(Context context) {
+        TelephonyManager mTelephonyMgr = (TelephonyManager) context.getSystemService(Context.TELEPHONY_SERVICE);
+        String imsi = mTelephonyMgr.getSubscriberId();
+        return imsi;
+    }
+    
+    public static String getCsn(Context context) {
+        String imsi = getImsi(context);
+        String csn = Constants.DEFAULT_CSN;
+        if (imsi != null && imsi.length() >= 8) {
+            csn = imsi.substring(imsi.length() - 8);
+        }
+        return csn;
     }
 
 }

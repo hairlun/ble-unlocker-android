@@ -42,6 +42,8 @@ public class Constants {
 	public static final byte READ_CARD = (byte) 0x90;
 	public static final byte WRITE_CARD = (byte) 0x91;
 	public static final byte DISCONNECT = (byte) 0xA0;
+	
+	public static final String DEFAULT_CSN = "88 87 22 50 ";
 
     /**
      * Extras Constants
