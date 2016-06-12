@@ -67,7 +67,7 @@ public class UnlockActivity extends Activity implements OnItemClickListener,
     private boolean nofityEnable = false;
     private boolean handShake = false;
     private String cardNum = "FF FF FF FF ";
-    private String csn = "88 87 22 50 ";
+    private String csn;
     private static final int REQUEST_FINE_LOCATION = 0;
     private boolean mScanning = false;
 
@@ -93,6 +93,7 @@ public class UnlockActivity extends Activity implements OnItemClickListener,
         if (!mScanning) {
             startScan();
         }
+        csn = Utils.getCsn(this);
     }
 
     /**
