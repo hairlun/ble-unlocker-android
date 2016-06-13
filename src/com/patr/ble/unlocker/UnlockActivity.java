@@ -33,16 +33,12 @@ import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.annotation.NonNull;
-import android.support.v4.app.ActivityCompat;
-import android.support.v4.content.ContextCompat;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.View.OnClickListener;
 import android.widget.AdapterView;
 import android.widget.Button;
-import android.widget.ImageView;
-import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.AdapterView.OnItemClickListener;
@@ -811,7 +807,7 @@ public class UnlockActivity extends Activity implements OnItemClickListener,
             if (convertView == null) {
                 holder = new ViewHolder();
                 convertView = LayoutInflater.from(mContext).inflate(
-                        R.layout.item_server_addr, null);
+                        R.layout.item_text, null);
                 holder.tv = (TextView) convertView.findViewById(R.id.choose_tv);
                 convertView.setTag(holder);
             } else {

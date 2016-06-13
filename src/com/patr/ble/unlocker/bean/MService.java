@@ -3,7 +3,7 @@ package com.patr.ble.unlocker.bean;
 import android.bluetooth.BluetoothGattService;
 
 /**
- * Created by Administrator on 2015-11-20.
+ * Created by zhoushujie on 2015-11-20.
  */
 public class MService {
     private String name;

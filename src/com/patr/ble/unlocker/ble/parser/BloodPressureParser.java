@@ -35,8 +35,6 @@ package com.patr.ble.unlocker.ble.parser;
 import android.bluetooth.BluetoothGattCharacteristic;
 import android.content.Context;
 
-import java.util.logging.Logger;
-
 import com.patr.ble.unlocker.R;
 import com.patr.ble.unlocker.utils.Constants;
 
